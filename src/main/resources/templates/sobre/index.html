@@ -1,0 +1,145 @@
+<div th:replace="shared/header"></div>
+<style>
+    
+    .team .member {
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    width: 300px;
+    padding: 15px;
+    overflow: hidden;
+    box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
+}
+
+.team .member img {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.team .member .member-content {
+  padding: 0 20px 30px 20px;
+}
+
+.team .member h4 {
+  font-weight: 700;
+  margin-top: 16px;
+  margin-bottom: 2px;
+  font-size: 20px;
+  color: black;
+}
+
+.team .member span {
+  font-style: italic;
+  display: block;
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.team .member p {
+  padding-top: 10px;
+  font-size: 14px;
+  font-style: italic;
+  color: #6c757d;
+}
+
+.team .member .social {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.team .member .social a {
+  color: #a2a2a2;
+  transition: 0.3s;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #bbbbbb;
+}
+
+.team .member .social a:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.team .member .social i {
+  font-size: 18px;
+  margin: 0 2px;
+}
+</style>
+<div class="section-header">
+    <H2>Sobre Nós</H2>
+</div>
+   
+<section id="team" class="team">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-header">
+        <h3>Nosso Time</h3>
+        <p>Nulla dolorum nulla nesciunt rerum facere sed ut inventore quam porro nihil id ratione ea sunt quis dolorem dolore earum</p>
+      </div>
+
+      <div class="row gy-4">
+
+        <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+          <div class="member">
+            <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+            <h4>Lucas Cabral</h4>
+            <span>Web Development</span>
+            <div class="social">
+              
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+              <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div><!-- End Team Member -->
+
+        <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+          <div class="member">
+            <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+            <h4>Anna Silva</h4>
+            <span>Program manager</span>
+            <div class="social">
+              
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+              <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div><!-- End Team Member -->
+
+        <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+          <div class="member">
+            <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+            <h4>Matheus Camargo</h4>
+            <span>Quality Assurance</span>
+            <div class="social">
+              
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+              <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div><!-- End Team Member -->
+
+        <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+          <div class="member">
+            <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
+            <h4>Leonardo Ierich</h4>
+            <span>Frontend/Design</span>
+            <div class="social">
+              
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+              <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div><!-- End Team Member -->
+
+      </div>
+
+    </div>
+  </section>
+<div th:replace="shared/footer"></div>

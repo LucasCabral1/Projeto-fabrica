@@ -1,0 +1,136 @@
+<div th:replace="${user} ? ~{shared/header-logado} : ~{shared/header}"></div>
+
+<div class="container mt-4" id="meusPontos">
+    <div class="row">
+        <div class="col-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                Alimentos Doados</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">12.000 kg</div>
+                        </div>
+                        <div class="col-auto icon">
+                            <i class="fa-solid fa-seedling"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                Pontos destribúidos</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">5350 pontos</div>
+                        </div>
+                        <div class="col-auto icon">
+                            <i class="fa-solid fa-gift"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                Premios</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">R$ 2.540,00</div>
+                        </div>
+                        <div class="col-auto icon">
+                            <i class="fa-solid fa-coins"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+       
+        
+        <section id="service" class="services sections-bg">
+            <div class="container" data-aos="fade-up">
+      
+              <div class="section-header mt-3">
+                <h2>Doação</h2>
+                <p>Segue abaixo um passo a passo para registrar a sua doação</p>
+              </div>
+      
+              <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
+      
+                <div class="col-lg-4 col-md-6">
+                  <div class="service-item  position-relative">
+                    <div class="icon">
+                        <i class="fa-solid fa-box"></i>
+                    </div>
+                    <h3>Entrega</h3>
+                    <p>Se dirija até uma das nossas ONGs parceiras e faça a sua doação, que será repartida para as pessoas necessitadas</p>
+                    <a href="#" class="readmore stretched-link">Saiba Mais &nbsp;<i class="fa-solid fa-circle-info"></i></a>
+                  </div>
+                </div><!-- End Service Item -->
+      
+                <div class="col-lg-4 col-md-6">
+                  <div class="service-item position-relative">
+                    <div class="icon">
+                      <i class="fa-solid fa-file"></i>
+                    </div>
+                    <h3>Registro</h3>
+                    <p>Depois de entregar a sua doação, se encaminha para a area de doação e registre a doação através de um formulário</p>
+                    <a href="#" class="readmore stretched-link">Saiba Mais &nbsp;<i class="fa-solid fa-circle-info"></i></a>
+                  </div>
+                </div><!-- End Service Item -->
+      
+                <div class="col-lg-4 col-md-6">
+                  <div class="service-item position-relative">
+                    <div class="icon">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <h3>Confirmação</h3>
+                    <p>Este registro será analizado e confirmado pela ONG, caso seja aprovado o seu pedido será notificado através de um email e também na aréa das suas doações</p>
+                    <a href="#" class="readmore stretched-link">Saiba mais &nbsp;<i class="fa-solid fa-circle-info"></i></a>
+                  </div>
+                </div><!-- End Service Item -->
+      
+      
+           
+      
+            </div>
+            <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item position-relative">
+                      <div class="icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                      </div>
+                      <h3>Resgate de Pontos</h3>
+                      <p>Com a confirmação pela ONG, serão gerados pontos equivalentes aquela doação e serão computados no seu perfil</p>
+                      <a href="#" class="readmore stretched-link">Saiba Mais &nbsp; <i class="fa-solid fa-circle-info"></i></a>
+                    </div>
+                  </div><!-- End Service Item -->
+
+
+                  <div class="col-lg-4 col-md-6">
+                    <div class="service-item position-relative">
+                      <div class="icon">
+                        <i class="fa-solid fa-repeat"></i>
+                      </div>
+                      <h3>Troca de Pontos</h3>
+                      <p>Após acumular pontos você pode trocar esses pontos por produtos disponíveis na nossa loja de pontos</p>
+                      <a href="#" class="readmore stretched-link">Saiba Mais &nbsp; <i class="fa-solid fa-circle-info"></i></a>
+                    </div>
+                  </div><!-- End Service Item -->
+
+            </div>
+          </section><!-- End Our Services Section -->
+    
+    </div>
+
+</div>
+<div th:replace="shared/footer">

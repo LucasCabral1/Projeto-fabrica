@@ -1,0 +1,226 @@
+<div th:replace="${user} ? ~{shared/header-logado} : ~{shared/header}"></div>
+<!-- <div   th:replace="shared/header-logado"></div> -->
+
+                <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex justify-content-center align-items-center">
+    <div id="heroCarousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Bem vindo ao <span>DOA+</span></h2>
+          <p class="animate__animated animate__fadeInUp">Somos um projeto que busca intencificar a doação de alimentos a instituições voluntárias, para isso oferecemos recompensas enquanto você ajuda o próximo</p>
+          <a href="/doacao/sobre" class="btn-get-started animate__animated animate__fadeInUp scrollto">Saiba mais</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Icon Boxes Section ======= -->
+    <section id="icon-boxes" class="icon-boxes">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="fa-solid fa-1"></i></div>
+              <h4 class="title"><a href="/login/novo">Cadastre-se</a></h4>
+              <p class="description">Criei uma conta para que possa usufruir de todas as funcionalidades do nosso site</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="fa-solid fa-2"></i></div>
+              <h4 class="title"><a href="/ong">Faça uma doação</a></h4>
+              <p class="description">Se dirija até uma das nossas ONG parceiras e faça uma doação</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="fa-solid fa-3"></i></div>
+              <h4 class="title"><a href="">Registre essa doação</a></h4>
+              <p class="description">Depois de concluida a sua doação, faça o registro dela no site que será analisado pela ONG</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="fa-solid fa-4"></i></div>
+              <h4 class="title"><a href="">Resgate de Pontos</a></h4>
+              <p class="description">Assim que confirmado a sua doação, será revertido em pontos</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Icon Boxes Section -->
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Sobre nós</h2>
+          <p>O Doa+ é uma plataforma web, que foi desenvolvida com o objetivo de promover a doações de alimentos, conectando os doadores com as ONGs, de modo que poderão se cadastrar no site e ganhar pontos que serão usados em benefícios oferecidos pelas empresas parceiras, também ajuda a contribuir com os Objetivos de Desenvolvimento Sustentável (ODS).</p>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="clients-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="assets/img/lojas-americanas-logo.svg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/cacau-show-logo.svg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/carrefour-logo.svg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/omo-logo.svg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/ifood-logo.svg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/natura-logo.svg" class="img-fluid" alt=""></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Clients Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container-fluid">
+
+        <div class="row">
+
+          <div class="col-6 align-items-stretch position-relative video-box" style='background-image: url("https://observatorio3setor.org.br/wp-content/uploads/2015/08/fome.jpg");' data-aos="fade-right">
+            <a href="https://www.youtube.com/watch?v=rvET4ADE8JQ" class="glightbox play-btn mb-4"></a>
+          </div>
+
+          <div class="col-6 d-flex flex-column justify-content-center align-items-stretch" data-aos="fade-left">
+
+            <div class="content mb-3">
+              <h3><strong>ODS - Fome Zero e Agricultura Sustentável</strong></h3>
+              <p>
+                Os Objetivos de Desenvolvimento Sustentável (ODS) faz parte da Agenda 2030 da ONU, onde os principais objetivos são acabar com a fome, a pobreza, combater a desigualdade, lutar pelos direitos humanos, pelas mudanças climáticas e entre outros, que somente são possíveis de serem alcançar com a ajuda de países, empresas, instituições e sociedade civil.  
+              </p>
+              <p>Nosso projeto foca em especifíco no objetivo 2 da ODS que é até 2030, acabar com a fome e garantir o acesso de todas as pessoas, em particular os pobres e pessoas em situações vulneráveis, incluindo crianças, a alimentos seguros, nutritivos e suficientes durante todo o ano.</p>
+              <p>
+                Dobrar a produtividade agrícola e a renda dos pequenos produtores de alimentos, particularmente das mulheres, povos indígenas, agricultores familiares, pastores e pescadores, inclusive por meio de acesso seguro e igual à terra.
+              </p>
+            </div>
+
+            
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container">
+
+        <div class="row" data-aos="zoom-in">
+          <div class="col-lg-9 text-center text-lg-start">
+            <h3>Cadastre-se</h3>
+            <p> Venha fazer parte da transformação, ajude ONGs próximas de você. Faça seu cadastro e ajude no combate contra a fome</p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="/login/novo">Fazer o cadastro</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Cta Section -->
+
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Time - ALM</h2>
+          <p>Nós somos os responsáveis pela idealização e realização desse projeto</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="img/ana-img.jpeg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Anna Silva</h4>
+                <span>PO</span>
+                <div class="social">
+                  
+                  <a href="https://www.linkedin.com/in/anna-j%C3%BAllia-barbosa-719b7016a/" target="_blank"><i class="fa-brands fa-linkedin"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4 mt-lg-0">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="https://media-exp1.licdn.com/dms/image/C5603AQFBy2gaXBTfEQ/profile-displayphoto-shrink_800_800/0/1610598184703?e=1674086400&v=beta&t=nsEZZ_QDBapEoyb4JpGIcWXSFoFRLGGxp_ttgnDUpxs" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Leonard Ierich</h4>
+                <span>Desenvolvedor Front-end</span>
+                <div class="social">
+                  <a href="https://www.linkedin.com/in/leonardo-carvalho-bb4a191bb/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="img/img-lucas.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Lucas Cabral</h4>
+                <span>Desenvolvedor Full Stack</span>
+               
+                <div class="social">
+                  <a href="https://www.linkedin.com/in/lucas-cabral-r3006/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="/img/img-matheus.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Matheus Camargo</h4>
+                <span>Tester</span>
+
+                <div class="social">
+                  <a href="https://www.linkedin.com/in/matcamargo/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
+
+    
+
+
+
+  </main><!-- End #main -->
+
+<div th:replace="shared/footer"></div>
+
+          

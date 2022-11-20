@@ -1,0 +1,102 @@
+.icone-pontos {
+
+    display: flex;
+    width: 80px;
+    height: 76px;
+   
+    align-items: center;
+    background-image: url(https://uploads-ssl.webflow.com/5d9df76…/5d9e370…_icone-pontos.png);
+    background-position: 0px 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#novaDoacao {
+    background-color: #036564;
+}
+ #services{
+    padding: 60px 0;
+  }
+  
+ .service-item {
+    padding: 40px;
+    color: #858796;;
+    background: #fff;
+    height: 100%;
+    border-radius: 10px;
+  }
+
+  #meusPontos .icon {
+   
+    position: relative;
+    align-items: center;
+  }
+
+  #meusPontos .icon i {
+    color: #036564;
+    font-size: 26px;
+    z-index: 2;
+    position: relative;
+  }
+
+  
+  
+ .service-item .icon {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin-bottom: 50px;
+  }
+  
+ .service-item .icon i {
+    color: #036564;
+    font-size: 40px;
+    transition: ease-in-out 0.3s;
+    z-index: 2;
+    position: relative;
+  }
+  
+  /* .service-item .icon:before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #eeeeee;
+    border-radius: 50px;
+    z-index: 1;
+    top: 10px;
+    right: -20px;
+    transition: 0.3s;
+  } */
+  
+ .service-item h3 {
+    color: #036564;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    padding-bottom: 8px;
+    font-size: 22px;
+    position: relative;
+    display: inline-block;
+    border-bottom: 4px solid #eeeeee;
+    transition: 0.3s;
+  }
+  
+ .service-item p {
+    line-height: 24px;
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+  
+ .service-item .readmore {
+    margin-top: 16px;
+    display: inline-block;
+    color: #036564;
+  }
+  
+  /* .service-item:hover .icon:before {
+    background: #00b6a1;
+  } */
+  
+ .service-item:hover h3 {
+    border-color: #036564;
+  }

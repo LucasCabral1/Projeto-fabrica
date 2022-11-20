@@ -1,0 +1,309 @@
+<div th:replace="${user} ? ~{shared/header-logado} : ~{shared/header}"></div>
+<style>
+    .recent-posts article {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  background-color: #036564;
+  padding: 30px;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.recent-posts .post-img {
+  max-height: 240px;
+  height: 200px;
+  margin: -30px -30px 15px -30px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.recent-posts .post-category {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.recent-posts .title {
+  font-size: 22px;
+  font-weight: 700;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.recent-posts .title a {
+  color:#fff;
+  transition: 0.2s;
+}
+.recent-posts p {
+  color:#fff;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.recent-posts .title a:hover {
+  color: #f6b024;
+}
+
+.recent-posts .post-author-img {
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.recent-posts .post-author {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.recent-posts .post-date {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 0;
+}
+#local .section-header h3{
+  margin-bottom: 0px;
+  padding: 10px;
+}
+li{
+  padding-bottom: 5px;
+}
+</style>
+<div class="container mt-4">
+    <div class="row">
+        <div class="section-header">
+            <h2>ONGs Parceiras</h2>
+            <p>As doações que são coletadas atráves desse portal serão enviados para as instituições listadas a seguir, esses alimentos serão de extrema importância para essas ONGs que irá distribuir para as pessoas necessitadas, faça a diferença !!! </p>
+          </div>
+    </div>
+    <div class="row">
+    
+        <div id="map" class="col-7">
+          <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1vZNS8IeUGZzsxKQIvGM-xgVdcOH9mIg&ehbc=2E312F" width="100%" height="600"></iframe>
+        </div>
+        <div class="col-5" id="local">
+          <div class="section-header">
+            <h3>Localização</h3>
+          </div>
+          <ul>
+            <li><b>NAAÇÃO</b> - Av. Dom Pedro II, 1689 - Carlos Prates, Belo Horizonte - MG, 30710-010</li>
+            <li><b>Lar Casa Bela</b> - R. José Romão Roque, 15 - Jardim Pagliato, Sorocaba - SP, 18046-156</li>
+            <li><b>Gastromotiva</b> - R. da Lapa, 108 - Centro, Rio de Janeiro - RJ, 20021-180/li>
+            <li><b>Instituto Amor Horizontal</b> - R. Fidêncio Ramos, 244-308 - Vila Olímpia, São Paulo - SP, 04551-010</li>
+            <li><b>ANG</b> - 102, R. Noel Bento de Almeida, Sorocaba - SP</li>
+            <li><b>Instituto Uno</b> - R. Salvador Simões, 801 - 1208 - Alto do Ipiranga, São Paulo - SP, 04276-000</li>
+            <li><b>Amigos do Bem</b> - Rua Dr. Gabriel de Resende, 122 - Vila Invernada, São Paulo - SP, 03350-005</li>
+            <li><b>ADERE</b> - R. Contos Gauchescos, 86 - Vila Santa Catarina, São Paulo - SP, 04369-000</li>
+            <li><b>CEFAS</b> - R. Carlos Eugênio de Siqueira Salerno, 568 - Parque Campolim, Sorocaba - SP, 18048-040</li>
+          </ul>
+        </div>
+      
+    </div>
+    <div class="row">
+        <section id="recent-posts" class="recent-posts sections-bg">
+            <div class="container" data-aos="fade-up">
+              <div class="row gy-4">
+      
+                <div class="col-xl-4 col-md-6">
+                    <article>
+        
+                      <div class="post-img">
+                        <img src="img/naacao5.jpg" alt="" class="img-fluid">
+                      </div>
+        
+                      <h2 class="title">
+                        <a target="_blank"  href="https://naacao.com.br/">Naação</a>
+                        <p class="mt-2">
+                          Antes de tudo, criamos a NAAÇÃO como uma iniciativa para desenvolver lideranças sociais nas comunidades.
+
+Por causa disso, em 2018, criamos a Metodologia NAAÇÃO de Formação e Desenvolvimento de Lideranças Sociais.
+
+Com apoio de grandes players do mercado, como Sebrae e Fundação Dom Cabral, conseguimos acelerar 27 empreendedores sociais e realizamos 16 iniciativas sociais.
+                        </p>
+                      </h2>
+        
+                     
+        
+                    </article>
+                </div><!-- End post list item -->
+                <div class="col-xl-4 col-md-6">
+                    <article>
+        
+                      <div class="post-img">
+                        <img src="img/gastromotiva2.jpg" alt="" class="img-fluid">
+                      </div>
+        
+                      <h2 class="title">
+                        <a target="_blank"  href="https://gastromotiva.org/">Gastromotiva</a>
+                        <p class="mt-2">
+                          Fundada em 2006, pelo chef e empreendedor social David Hertz, a Gastromotiva é uma organização que oferece formações profissionais para que seus alunos se tornem empreendedores, auxiliares e chefs de cozinha, replicadores da sua metodologia.lém de despertar em muitos deles a vontade de se tornarem mobilizadores comunitários.
+                        </p>
+                      </h2>
+        
+                     
+        
+                    </article>
+                </div><!-- End post list item -->
+                <div class="col-xl-4 col-md-6">
+                    <article>
+        
+                      <div class="post-img">
+                        <img src="img/larcasabela.jpg" alt="" class="img-fluid">
+                      </div>
+        
+                      <h2 class="title">
+                        <a target="_blank"  href="https://www.larcasabela.org.br/">Lar Casa Bela</a>
+                        <p class="mt-2">
+                          O Lar Casa Bela é uma OSC  - Organização da Sociedade Civil- que oferece acolhimento institucional temporário para bebês, crianças e adolescentes remanejados pelo Poder Judiciário ou pelo Conselho Tutelar, quando não estão recebendo os cuidados necessários para o seu pleno desenvolvimento. 
+
+ 
+                        </p>
+                      </h2>
+        
+                     
+        
+                    </article>
+                </div><!-- End post list item -->
+      
+                
+      
+              </div><!-- End recent posts list -->
+      
+            </div>
+
+            <div class="container mt-4" data-aos="fade-up">
+                <div class="row gy-4">
+        
+                  <div class="col-xl-4 col-md-6">
+                    <article>
+        
+                      <div class="post-img">
+                        <img src="img/amorhorizontal.jpeg" alt="" class="img-fluid">
+                      </div>
+        
+                      <h2 class="title">
+                        <a target="_blank"  href="https://amorhorizontal.org/">Fundação Amor Horizontal</a>
+                        <p class="mt-2">
+                          A Fundação Amor Horizontal apoia a infância e fomenta a cultura de doação no Brasil desde 2014.
+
+Promovemos o impacto na vida de milhares de crianças, aproximando doadores a organizações sociais idôneas através da nossa plataforma online, campanhas de sensibilização e programas de profissionalização
+                        </p>
+                      </h2>
+        
+                     
+        
+                    </article>
+                  </div><!-- End post list item -->
+                  <div class="col-xl-4 col-md-6">
+                      <article>
+          
+                        <div class="post-img">
+                          <img src="img/cefas.png" alt="" class="img-fluid">
+                        </div>
+          
+                        <h2 class="title">
+                          <a target="_blank"  href="https://www.cefassorocaba.com.br/">CEFAS</a>
+                          <p class="mt-2">
+                            O Centro Familiar de Solidariedade Nossa Senhora Rainha da Paz, CEFAS, é uma organização assistencial sem fins lucrativos de apoio a dependentes químicos e seus familiares, com trabalhos de hospitalização, formação profissional e de cidadania.
+                          </p>
+                        </h2>
+          
+                       
+          
+                      </article>
+                  </div><!-- End post list item -->
+                  <div class="col-xl-4 col-md-6">
+                      <article>
+          
+                        <div class="post-img">
+                          <img src="img/adere.jpg" alt="" class="img-fluid">
+                        </div>
+          
+                        <h2 class="title">
+                          <a target="_blank"  href="https://www.adere.org.br/">ADERE</a>
+                          <p class="mt-2">
+                            A ADERE é uma instituição sem fins lucrativos, que desde 1972 realiza um atendimento especializado, humanizado e altamente qualificado à pessoa com deficiência intelectual. Atendemos pessoas com diferentes desejos, desafios e acompanhamos os primeiros passos em um novo caminho.
+                          </p>
+                        </h2>
+          
+                       
+          
+                      </article>
+                  </div><!-- End post list item -->
+        
+                  
+        
+                </div><!-- End recent posts list -->
+        
+              </div>
+
+              <div class="container mt-4" data-aos="fade-up">
+                <div class="row gy-4">
+        
+                  <div class="col-xl-4 col-md-6">
+                    <article>
+        
+                      <div class="post-img">
+                        <img src="img/amigosbem.jpg" alt="" class="img-fluid">
+                      </div>
+        
+                      <h2 class="title">
+                        <a target="_blank"  href="https://www.amigosdobem.org/">Amigos do Bem</a>
+                        <p class="mt-2">
+                          O nosso trabalho começou em 1993, com um pequeno grupo de amigos, liderado por Alcione Albanesi. Hoje, somos um dos maiores projetos sociais do país e atendemos, regularmente, a mais de 150 mil pessoas no sertão de Alagoas, de Pernambuco e do Ceará
+                        </p>
+                      </h2>
+        
+                     
+        
+                    </article>
+                  </div><!-- End post list item -->
+                  <div class="col-xl-4 col-md-6">
+                      <article>
+          
+                        <div class="post-img">
+                          <img src="img/uno.jpg" alt="" class="img-fluid">
+                        </div>
+          
+                        <h2 class="title">
+                          <a target="_blank" href="https://www.institutouno.org.br/home-1">Instituto UNO</a>
+                          <p class="mt-2">
+                          
+Desde 2011 atendemos a 310 crianças e adolescentes em 28 serviços de acolhimento, realizando cerca de 5 mil atividades educativas 'in loco' complementadas com 17 excursões e  41 estudos exploratórios externos
+                          </p>
+                        </h2>
+          
+                       
+          
+                      </article>
+                  </div><!-- End post list item -->
+                  <div class="col-xl-4 col-md-6">
+                      <article>
+          
+                        <div class="post-img">
+                          <img src="img/novageracao.png" alt="" class="img-fluid">
+                        </div>
+          
+                        <h2 class="title">
+                          <a target="_blank" href="https://www.ong.ng-brasil.com/">Associação Nova Geração</a>
+                          <p class="mt-2">
+                            Somos uma organização não governamental, de caráter filantrópico, sem fins lucrativos, localizada em São João Del Rei, no interior de Minas Gerais.
+                          </p>
+                        </h2>
+          
+                       
+          
+                      </article>
+                  </div><!-- End post list item -->
+        
+                  
+        
+                </div><!-- End recent posts list -->
+        
+              </div>
+          </section><!-- End Recent Blog Posts Section -->
+    </div>
+</div>
+<script type="text/javascript">
+   
+</script>
+<div th:replace="shared/footer"></div>

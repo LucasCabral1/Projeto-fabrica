@@ -1,0 +1,800 @@
+<div th:replace="shared/header-logado"></div>
+<style>
+    .meusPontos{
+        color: #036564;
+    }
+    #meuPontos{
+        position: fixed;
+        z-index: 100;
+    }
+    .pontos i {
+        font-size: 28px;
+        color: #036564 ;
+        padding: 5px 20px 5px 5px;
+    }
+    #carrousel-card .card {
+        height: 200px;
+        max-height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        transition: 0.5s;
+        background-color: #fff;
+        border-radius: 10px;
+        border: none;
+    }
+    #carrousel-card .card:hover {
+        
+        transform: scale(1.05);
+       
+    }
+    h4{
+        color: black;
+    }
+    .carousel {
+	margin: 50px auto;
+	padding: 0 70px;
+}
+.carousel .item {
+	color: #747d89;
+	min-height: 325px;
+	text-align: center;
+	overflow: hidden;
+}
+.carousel .thumb-wrapper {
+	padding: 10px 25px;
+	background: #fff;
+	border-radius: 10px;
+	text-align: center;
+	position: relative;
+    border: 2px solid;
+    height: 300px;
+	box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
+
+#natura .carousel .thumb-wrapper {
+    border-color: #FF6B0B;
+}
+
+#americanas .carousel .thumb-wrapper {
+    border-color: #F80032;
+}
+
+#ifood .carousel .thumb-wrapper {
+    border-color: #F71D2C;
+}
+
+#carrefour .carousel .thumb-wrapper {
+    border-color: #1E5BC6;
+}
+.carousel .item .img-box {
+	height: 150px;
+	margin-bottom: 10px;
+	width: 100%;
+	position: relative;
+}
+.carousel .item img {	
+	max-width: 100%;
+	max-height: 100%;
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+}
+.carousel .item h4 {
+	font-size: 16px;
+    
+    font-weight: bold;
+    margin-bottom: 10px;
+    
+}
+.carousel .item p {
+    color: 545457;
+	font-size: 15px;
+    font-weight: bold;
+
+}
+.carousel .item, .carousel .item p, .carousel .item ul {
+	margin-bottom: 5px;
+}
+.carousel .thumb-content .btn {
+	color: #036564;
+	font-size: 11px;
+	text-transform: uppercase;
+	font-weight: bold;
+	background: none;
+	border: 1px solid #036564;
+	padding: 6px 14px;
+	margin-top: 5px;
+	line-height: 16px;
+	border-radius: 20px;
+}
+.carousel .thumb-content .btn:hover, .carousel .thumb-content .btn:focus {
+	color: #fff;
+	background: #036564;
+	box-shadow: none;
+}
+.carousel .thumb-content .btn i {
+	font-size: 14px;
+	font-weight: bold;
+	margin-left: 5px;
+}
+.carousel .item-price {
+	font-size: 13px;
+	padding: 2px 0;
+}
+.carousel .item-price strike {
+	opacity: 0.7;
+	margin-right: 5px;
+}
+.carousel-control-prev, .carousel-control-next {
+	height: 44px;
+	width: 40px;
+	background: #036564;	
+	margin: auto 0;
+	border-radius: 4px;
+	opacity: 0.8;
+}
+.carousel-control-prev:hover, .carousel-control-next:hover {
+	background: #036564;
+	opacity: 1;
+}
+.carousel-control-prev i, .carousel-control-next i {
+	font-size: 36px;
+	position: absolute;
+	top: 50%;
+	display: inline-block;
+	margin: -19px 0 0 0;
+	z-index: 5;
+	left: 0;
+	right: 0;
+	color: #fff;
+	text-shadow: none;
+	font-weight: bold;
+}
+.carousel-control-prev i {
+	margin-left: -2px;
+}
+.carousel-control-next i {
+	margin-right: -4px;
+}		
+.carousel-indicators {
+	bottom: -50px;
+}
+.carousel-indicators li, .carousel-indicators li.active {
+	width: 10px;
+	height: 10px;
+	margin: 4px;
+	border-radius: 50%;
+	border: none;
+}
+.carousel-indicators li {	
+	background: rgba(0, 0, 0, 0.2);
+}
+.carousel-indicators li.active {	
+	background: rgba(0, 0, 0, 0.6);
+}
+
+
+
+</style>
+
+<div class="container justify-content-center">
+        <div class="col-3 pontos mt-3" id="meuPontos">
+            <div class="card border-left-primary shadow h-100 py-2 ">
+                <div class="card-body ">
+                    <div class="row no-gutters align-items-center">
+                      <div class="col-auto">
+                        <i class="fa-solid fa-medal"></i>
+                      </div>
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold meusPontos text-uppercase mb-1">
+                                Meus Pontos</div>
+                            <div th:text="${user.pontos}" class="h5 mb-0 font-weight-bold text-gray-800"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+   
+    <section class="row" id="comoFunciona">
+        <section >
+            
+                <div class="row">
+                    <div class="section-header col-12">
+                        <h3>Como funciona</h3>
+                      </div>
+                    <div class="col-12" id="services">
+                        <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="col-lg-4 col-md-6">
+                              <div class="service-item  position-relative">
+                                <div class="icon">
+                                    <i class="fa-solid fa-truck"></i>
+                                </div>
+                                <h3>Doação</h3>
+                                <p>Após ser feita a doação e confirmada pela ONG, serão gerados pontos equivalentes</p>
+                              </div>
+                            </div><!-- End Service Item -->
+                  
+                            <div class="col-lg-4 col-md-6">
+                              <div class="service-item position-relative">
+                                <div class="icon">
+                                    <i class="fa-solid fa-medal"></i>
+                                </div>
+                                <h3>Pontos</h3>
+                                <p>Após doar e receber os pontos em sua conta, quanto mais doação mais pontos</p> 
+                              </div>
+                            </div><!-- End Service Item -->
+                  
+                            <div class="col-lg-4 col-md-6">
+                              <div class="service-item position-relative">
+                                <div class="icon">
+                                    <i class="fa-solid fa-repeat"></i>
+                                </div>
+                                <h3>Troca por Produtos</h3>
+                                <p>Com o acumulo dos pontos você pode trocar por produtos</p>
+                               
+                              </div>
+                            </div><!-- End Service Item -->
+                  
+                  
+                       
+                  
+                        </div>
+                    </div>
+
+                </div>
+            
+        </section>
+    </section>
+    <div class="section-header">
+        <h3>Produtos</h3>
+    </div>
+    <section class="row mb-2" id="produtos">
+            <div class="container" id="troca">
+                <div class="row mb-3" id="natura" >
+                    <div class="col-md-12" >
+                        <h4>Natura</h4>
+                        <div id="carouselNatura" class="carousel slide" data-ride="carousel" data-interval="0">
+                            <!-- Carousel indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselNatura" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselNatura" data-slide-to="1"></li>
+                                
+                            </ol>   
+                            <!-- Wrapper for carousel items -->
+                            <div class="carousel-inner">
+                                <div class="item carousel-item active">
+                                    <div class="row">
+                                        <div class="col" th:each="natura : ${productNatura}">
+                                            <div class="thumb-wrapper" >
+                                                <div class="img-box">
+                                                    <img src="img/natura-logo.svg" class="img-fluid" alt="">									
+                                                </div>
+                                                <div class="thumb-content" th:inline="text">
+                                                    <h4 th:text="${natura.nome}"></h4>									
+                                                    <b><p class="item-price" th:text="${natura.preco} + ' Pontos'"></p></b>
+                                                    <a th:href="@{/troque/resgatar/{id}(id=${natura.id})}" class="btn btn-primary">Resgatar</a>
+                                                </div>						
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                </div>
+                                <div class="item carousel-item">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <div class="thumb-wrapper">
+                                                <div class="img-box">
+                                                    <img src="img/natura-logo.svg" class="img-fluid" alt="">									
+                                                </div>
+                                                <div class="thumb-content">
+                                                    <h4>Hidratante Natura Ecos</h4>									
+                                                    <p class="item-price"><b>3200 pontos</b></p>
+                                                    <a href="#" class="btn btn-primary">Resgatar</a>
+                                                </div>						
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="thumb-wrapper">
+                                                <div class="img-box">
+                                                    <img src="img/natura-logo.svg" class="img-fluid" alt="">									
+                                                </div>
+                                                <div class="thumb-content">
+                                                    <h4>Hidratante Natura Ecos</h4>									
+                                                    <p class="item-price"><b>3200 pontos</b></p>
+                                                    <a href="#" class="btn btn-primary">Resgatar</a>
+                                                </div>						
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="thumb-wrapper">
+                                                <div class="img-box">
+                                                    <img src="img/natura-logo.svg" class="img-fluid" alt="">									
+                                                </div>
+                                                <div class="thumb-content">
+                                                    <h4>Hidratante Natura Ecos</h4>									
+                                                    <p class="item-price"><b>3200 pontos</b></p>
+                                                    <a href="#" class="btn btn-primary">Resgatar</a>
+                                                </div>						
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="thumb-wrapper">
+                                                <div class="img-box">
+                                                    <img src="img/natura-logo.svg" class="img-fluid" alt="">									
+                                                </div>
+                                                <div class="thumb-content">
+                                                    <h4>Natura Teste</h4>									
+                                                    <p class="item-price"><b>3200 pontos</b></p>
+                                                    <a href="#" class="btn btn-primary">Resgatar</a>
+                                                </div>						
+                                            </div>
+                                        </div>
+                                        					
+                                    </div>
+                                </div>
+                               
+                            </div>
+                            <!-- Carousel controls -->
+                            <a class="carousel-control-prev" href="#carouselNatura" data-slide="prev">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselNatura" data-slide="next">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3" id="americanas">
+                    <div class="col-12" >
+                        <h4>Lojas Americanas</h4>
+                        <div id="carouselAmericanas" class="carousel slide" data-ride="carousel" data-interval="0">
+                            <!-- Carousel indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselAmericanas" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselAmericanas" data-slide-to="1"></li>
+                                
+                            </ol>   
+                            <!-- Wrapper for carousel items -->
+                            <div class="carousel-inner">
+                                <div class="item carousel-item active">
+                                    <div class="row">
+                                        <div class="col" th:each="americanas : ${productAmericanas}">
+                                            <div class="thumb-wrapper" >
+                                                <div class="img-box">
+                                                    <img src="img/lojas-americanas-logo.svg" class="img-fluid" alt="">									
+                                                </div>
+                                                <div class="thumb-content" th:inline="text">
+                                                    <h4 th:text="${americanas.nome}"></h4>									
+                                                    <b><p class="item-price" th:text="${americanas.preco} + ' Pontos'"></p></b>
+                                                    <a th:href="@{/troque/resgatar/{id}(id=${americanas.id})}" class="btn btn-primary">Resgatar</a>
+                                                </div>						
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item carousel-item">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <div class="thumb-wrapper">
+                                                <div class="img-box">
+                                                    <img src="img/lojas-americanas-logo.svg" class="img-fluid" alt="">									
+                                                </div>
+                                                <div class="thumb-content">
+                                                    <h4>Lojas Americanas Item</h4>									
+                                                    <p class="item-price"><b>3200 pontos</b></p>
+                                                    <a href="#" class="btn btn-primary">Resgatar</a>
+                                                </div>						
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="thumb-wrapper">
+                                                <div class="img-box">
+                                                    <img src="img/lojas-americanas-logo.svg" class="img-fluid" alt="">									
+                                                </div>
+                                                <div class="thumb-content">
+                                                    <h4>Lojas Americanas Item</h4>									
+                                                    <p class="item-price"><b>3200 pontos</b></p>
+                                                    <a href="#" class="btn btn-primary">Resgatar</a>
+                                                </div>						
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="thumb-wrapper">
+                                                <div class="img-box">
+                                                    <img src="img/lojas-americanas-logo.svg" class="img-fluid" alt="">									
+                                                </div>
+                                                <div class="thumb-content">
+                                                    <h4>Lojas Americanas Item</h4>									
+                                                    <p class="item-price"><b>3200 pontos</b></p>
+                                                    <a href="#" class="btn btn-primary">Resgatar</a>
+                                                </div>						
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="thumb-wrapper">
+                                                <div class="img-box">
+                                                    <img src="img/lojas-americanas-logo.svg" class="img-fluid" alt="">									
+                                                </div>
+                                                <div class="thumb-content">
+                                                    <h4>Lojas Americanas Item</h4>									
+                                                    <p class="item-price"><b>3200 pontos</b></p>
+                                                    <a href="#" class="btn btn-primary">Resgatar</a>
+                                                </div>						
+                                            </div>
+                                        </div>
+                                        					
+                                    </div>
+                                </div>
+                               
+                            </div>
+                            <!-- Carousel controls -->
+                            <a class="carousel-control-prev" href="#carouselAmericanas" data-slide="prev">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselAmericanas" data-slide="next">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row mb-3" id="carrefour">
+                    <div class="col-12" >
+                        <h4>Carrefour</h4>
+                        <div id="carouselCarrefour" class="carousel slide" data-ride="carousel" data-interval="0">
+                            <!-- Carousel indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselCarrefour" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselCarrefour" data-slide-to="1"></li>
+                                
+                            </ol>   
+                            <!-- Wrapper for carousel items -->
+                            <div class="carousel-inner">
+                                <div class="item carousel-item active">
+                                    <div class="row">
+                                        <div class="col" th:each="carre : ${productCarrefour}">
+                                            <div class="thumb-wrapper" >
+                                                <div class="img-box">
+                                                    <img src="img/carrefour-logo.svg" class="img-fluid" alt="">									
+                                                </div>
+                                                <div class="thumb-content" th:inline="text">
+                                                    <h4 th:text="${carre.nome}"></h4>									
+                                                    <b><p class="item-price" th:text="${carre.preco} + ' Pontos'"></p></b>
+                                                    <a th:href="@{/troque/resgatar/{id}(id=${carre.id})}" class="btn btn-primary">Resgatar</a>
+                                                </div>						
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="item carousel-item">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <div class="thumb-wrapper">
+                                                <div class="img-box">
+                                                    <img src="img/ifood-logo.svg" class="img-fluid" alt="">									
+                                                </div>
+                                                <div class="thumb-content">
+                                                    <h4>Lojas Americanas Item</h4>									
+                                                    <p class="item-price"><b>3200 pontos</b></p>
+                                                    <a href="#" class="btn btn-primary">Resgatar</a>
+                                                </div>						
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="thumb-wrapper">
+                                                <div class="img-box">
+                                                    <img src="img/ifood-logo.svg" class="img-fluid" alt="">									
+                                                </div>
+                                                <div class="thumb-content">
+                                                    <h4>Lojas Americanas Item</h4>									
+                                                    <p class="item-price"><b>3200 pontos</b></p>
+                                                    <a href="#" class="btn btn-primary">Resgatar</a>
+                                                </div>						
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="thumb-wrapper">
+                                                <div class="img-box">
+                                                    <img src="img/ifood-logo.svg" class="img-fluid" alt="">									
+                                                </div>
+                                                <div class="thumb-content">
+                                                    <h4>Lojas Americanas Item</h4>									
+                                                    <p class="item-price"><b>3200 pontos</b></p>
+                                                    <a href="#" class="btn btn-primary">Resgatar</a>
+                                                </div>						
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="thumb-wrapper">
+                                                <div class="img-box">
+                                                    <img src="img/ifood-logo.svg" class="img-fluid" alt="">									
+                                                </div>
+                                                <div class="thumb-content">
+                                                    <h4>Lojas Americanas Item</h4>									
+                                                    <p class="item-price"><b>3200 pontos</b></p>
+                                                    <a href="#" class="btn btn-primary">Resgatar</a>
+                                                </div>						
+                                            </div>
+                                        </div>
+                                        					
+                                    </div>
+                                </div>
+                               
+                            </div>
+                            <!-- Carousel controls -->
+                            <a class="carousel-control-prev" href="#carouselCarrefour" data-slide="prev">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselCarrefour" data-slide="next">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3" id="ifood">
+                    <div class="col-12" >
+                        <h4>IFood</h4>
+                        <div id="carouselIfood" class="carousel slide" data-ride="carousel" data-interval="0">
+                            <!-- Carousel indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselIfood" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselIfood" data-slide-to="1"></li>
+                                
+                            </ol>   
+                            <!-- Wrapper for carousel items -->
+                            <div class="carousel-inner">
+                                <div class="item carousel-item active">
+                                    <div class="row">
+                                        <div class="col" th:each="ifood : ${productIfood}">
+                                            <div class="thumb-wrapper" >
+                                                <div class="img-box">
+                                                    <img src="img/ifood-logo.svg" class="img-fluid" alt="">									
+                                                </div>
+                                                <div class="thumb-content" th:inline="text">
+                                                    <h4 th:text="${ifood.nome}"></h4>									
+                                                    <b><p class="item-price" th:text="${ifood.preco} + ' Pontos'"></p></b>
+                                                    <a th:href="@{/troque/resgatar/{id}(id=${ifood.id})}" class="btn btn-primary">Resgatar</a>
+                                                </div>						
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="item carousel-item">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <div class="thumb-wrapper">
+                                                <div class="img-box">
+                                                    <img src="img/ifood-logo.svg" class="img-fluid" alt="">									
+                                                </div>
+                                                <div class="thumb-content">
+                                                    <h4>Ifood Item</h4>									
+                                                    <p class="item-price"><b>3200 pontos</b></p>
+                                                    <a href="#" class="btn btn-primary">Resgatar</a>
+                                                </div>						
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="thumb-wrapper">
+                                                <div class="img-box">
+                                                    <img src="img/ifood-logo.svg" class="img-fluid" alt="">									
+                                                </div>
+                                                <div class="thumb-content">
+                                                    <h4>Ifood Item</h4>									
+                                                    <p class="item-price"><b>3200 pontos</b></p>
+                                                    <a href="#" class="btn btn-primary">Resgatar</a>
+                                                </div>						
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="thumb-wrapper">
+                                                <div class="img-box">
+                                                    <img src="img/ifood-logo.svg" class="img-fluid" alt="">									
+                                                </div>
+                                                <div class="thumb-content">
+                                                    <h4>Ifood Item</h4>									
+                                                    <p class="item-price"><b>3200 pontos</b></p>
+                                                    <a href="#" class="btn btn-primary">Resgatar</a>
+                                                </div>						
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="thumb-wrapper">
+                                                <div class="img-box">
+                                                    <img src="img/ifood-logo.svg" class="img-fluid" alt="">									
+                                                </div>
+                                                <div class="thumb-content">
+                                                    <h4>Ifood Item</h4>									
+                                                    <p class="item-price"><b>3200 pontos</b></p>
+                                                    <a href="#" class="btn btn-primary">Resgatar</a>
+                                                </div>						
+                                            </div>
+                                        </div>
+                                        					
+                                    </div>
+                                </div>
+                               
+                            </div>
+                            <!-- Carousel controls -->
+                            <a class="carousel-control-prev" href="#carouselIfood" data-slide="prev">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselIfood" data-slide="next">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+    </section>
+    <div class="row mt-5" id="empresas">
+        <section class="pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="section-header col-12">
+                        <h3>Empresas Parceiras</h3>
+                       
+                      </div>
+                    
+                    <div class="col-12">
+                        <div id="carrousel-card" class="carousel slide" data-ride="carousel">
+        
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-md-3 mb-3">
+                                            <div class="card">
+                                                <a href="https://www.omo.com/br/home.html" target="_blank">
+                                                    <img height="200" alt="100%x280" src="img/omo-logo.svg">
+                                                    <div class="card-body">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <div class="card">
+                                                <a href="https://www.nestle.com.br/" target="_blank">
+                                                    <img height="200" alt="100%x280" src="img/nestle-logo.svg">
+                                                    <div class="card-body">      
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <div class="card">
+                                                <a href="https://www.natura.com.br/" target="_blank">
+                                                    <img height="200" alt="100%x280" src="img/natura-logo.svg">
+                                                    <div class="card-body">
+                                                    </div>
+
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <div class="card">
+                                                <a href="https://www.ifood.com.br/" target="_blank">
+                                                    <img height="200" alt="100%x280" src="img/ifood-logo.svg">
+                                                    <div class="card-body">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+        
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+        
+                                        <div class="col-md-3 mb-3">
+                                            <div class="card">
+                                                <a href="https://www.carrefour.com.br/" target="_blank">
+                                                    <img height="200" alt="100%x280" src="img/carrefour-logo.svg">
+                                                    <div class="card-body">
+                                                    </div>
+                                                </a>
+        
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <div class="card">
+                                                <a href="https://www.americanas.com.br/" target="_blank">
+
+                                                    <img height="200" alt="100%x280" src="img/lojas-americanas-logo.svg">
+                                                    <div class="card-body">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <div class="card">
+                                                <a href="https://br.pg.com/" target="_blank"></a>
+                                                <img height="200" alt="100%x280" src="img/pg-logo.svg">
+                                                <div class="card-body">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <div class="card">
+                                                <a href="https://www.cacaushow.com.br/" target="_blank">
+                                                    <img height="200" alt="100%x280" src="img/cacau-show-logo.svg">
+                                                    <div class="card-body">
+                                                    </div>
+                                                </a>
+        
+                                            </div>
+                                        </div>
+        
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <a class="btn btn-standard   mb-3 mr-1" href="#carrousel-card" role="button" data-slide="prev">
+                                <i class="fa fa-arrow-left"></i>
+                            </a>
+                            <a class="btn btn-standard   mb-3 " href="#carrousel-card" role="button" data-slide="next">
+                                <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+  </button> -->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" >Adicionar</button>
+          <button type="button" class="btn btn-primary">Finalizar Compra</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <img src="..." class="rounded mr-2" alt="...">
+      <strong class="mr-auto">Bootstrap</strong>
+      <small>11 mins ago</small>
+      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="toast-body">
+      Hello, world! This is a toast message.
+    </div>
+  </div>
+  
+
+  
+</div>
+
+<div th:replace="shared/footer"></div>

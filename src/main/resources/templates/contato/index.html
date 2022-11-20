@@ -1,0 +1,225 @@
+<div th:replace="${user} ? ~{shared/header-logado} : ~{shared/header}"></div>
+<style>
+    .contact .info-container {
+  background-color: #036564;
+  height: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.contact .info-item {
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  color: #6e707e;
+}
+
+.contact .contact-form {
+  border-radius: 10px;
+  
+}
+
+.contact .info-item:last-child {
+  margin-bottom: 0;
+}
+
+.contact .info-item i {
+  font-size: 20px;
+  color: #6e707e;
+  float: left;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  margin-right: 15px;
+}
+
+.contact .info-item h4 {
+  padding: 0;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.contact .info-item p {
+  padding: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.contact .info-item:hover i {
+  background: #fff;
+  color: var(--color-primary);
+}
+
+.contact .php-email-form {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.colorItem{
+  color: white !important;
+  background-color: #036564 !important;
+}
+
+</style>
+<div class="container">
+    
+        <section id="contact" class="contact">
+          
+      
+              <div class="section-header">
+                <h2>Contato</h2>
+                <p>Através desse formulário você pode nos mandar sugestões, críticas e tirar dúvidas, será um prazer te atender.</p>
+              </div>
+
+              <section id="faq" class="faq">
+                
+            <div class="mb-2" id="faq">
+              <div class="container">
+                  <div class="row justify-content-center mb-3">
+                      <div class="col-12 col-sm-8 col-lg-6">
+                          <!-- Section Heading-->
+                          <div class="section_heading text-center wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                              <h3>FAQ - Perguntas Frequentes</h3>
+                              <p>Reunimos as principais questões que temos recebidos e listamos abaixo, afim de esclarecer os principais pontos</p>
+                              <div class="line"></div>
+                          </div>
+                      </div>
+                </div>
+            <div class="row justify-content-center">
+          <!-- FAQ Area-->
+            <div class="col-12 col-sm-10 col-lg-8 ">
+                <div class="accordion faq-accordian mb-3" id="faqAccordion">
+                    <div class="card border-0 wow fadeInUp " data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                        <div class="card-header colorItem" id="headingOne">
+                            <h6 class="mb-0 collapsed " data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">1 - Como funciona o sistema de pontos?<span class="lni-chevron-up"></span></h6>
+                        </div>
+                      <div class="collapse" id="collapseOne" aria-labelledby="headingOne" data-parent="#faqAccordion">
+                          <div class="card-body">
+                              <p>O sistema de pontos funciona como um programa de recompensas, onde suas doações voltam em forma de benefícios para você trocar seus pontos por produtos, serviços e experiências, de um jeito super prático.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="card border-0 wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                      <div class="card-header colorItem" id="headingTwo">
+                          <h6 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">2 - Como realizar doações?                            <span class="lni-chevron-up"></span></h6>
+                      </div>
+                      <div class="collapse" id="collapseTwo" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+                          <div class="card-body">
+                              <p>Você precisa realizar o cadastro na nossa plataforma e cadastrar o produto que deseja doar, logo após, você pode levar o seu produto até a ONG escolhida. </p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="card border-0 wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                      <div class="card-header colorItem" id="headingThree">
+                          <h6 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">3 - Como trocar os pontos?<span class="lni-chevron-up"></span></h6>
+                      </div>
+                      <div class="collapse" id="collapseThree" aria-labelledby="headingThree" data-parent="#faqAccordion">
+                          <div class="card-body">
+                              <p>Assim que confirmada sua doação pela ONG escolhida, você recebe os pontos em sua carteira digital e poderá escolher os benefícios disponíveis em nossa plataforma. </p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="card border-0 wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                    <div class="card-header colorItem" id="headingThree">
+                        <h6 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseThree">4 - Posso realizar outros tipos de doação?<span class="lni-chevron-up"></span></h6>
+                    </div>
+                    <div class="collapse" id="collapseFour" aria-labelledby="headingThree" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            <p>No momento a contabilização dos pontos funciona somente para doação de alimentos. </p>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <!-- Support Button-->
+              <div class="support-button text-center d-flex align-items-center justify-content-center mt-4 wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                  <i class="lni-emoji-sad"></i>
+                  <p class="mb-0 px-2">Não Encontrou a sua resposta? Preencha o formulário abaixo</p>
+                  
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+              </section><!-- End Frequently Asked Questions Section -->
+      
+              <div class="row gx-lg-0 gy-4">
+      
+                <div class="col-lg-5">
+      
+                  <div class="info-container d-flex flex-column align-items-center justify-content-center">
+                    <div class="info-item d-flex">
+                        <i class="fa-solid fa-envelope"></i>
+                      <div>
+                        <h4>Email:</h4>
+                        <p>doamaisapp@gmail.com</p>
+                      </div>
+                    </div><!-- End Info Item -->
+      
+                    <div class="info-item d-flex">
+                        <i class="fa-solid fa-phone"></i>
+                      <div>
+                        <h4>Telefone:</h4>
+                        <p>+15 9885548855</p>
+                      </div>
+                    </div><!-- End Info Item -->
+      
+                    <div class="info-item d-flex">
+                        <i class="fa-solid fa-calendar-days"></i>
+                      <div>
+                        <h4>Horário de Funcionamento:</h4>
+                        <p>Seg - Sab: 9AM - 18PM</p>
+                      </div>
+                    </div><!-- End Info Item -->
+                  </div>
+      
+                </div>
+      
+                <div class="col-lg-7">
+                  <form action="/contato/criar" method="post" role="form" class="php-email-form">
+                    <div th:if="${erro != null && erro != ''}" class="alert alert-danger" role="alert" th:text="${erro}">
+                                            
+                    </div>
+                    <div th:if="${sucesso != null && sucesso != ''}" class="alert alert-success" role="alert" th:text="${sucesso}">
+                                            
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6 form-group">
+                        <input type="text" name="nome" class="form-control" id="nome" placeholder="Digite seu nome" required>
+                      </div>
+                      <div class="col-md-6 form-group mt-3 mt-md-0">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Digite seu email" required>
+                      </div>
+                    </div>
+                    <div class="form-group mt-3">
+                      <input type="text" class="form-control" name="assunto" id="assunto" placeholder="Assunto" required>
+                    </div>
+                    <div class="form-group mt-3">
+                      <textarea class="form-control" name="mensagem" rows="5" placeholder="Menssagem" required></textarea>
+                    </div>
+                    
+                    <div class="text-center"><button class="btn-primary btn  btn-block" type="submit">Enviar</button></div>
+                  </form>
+                </div><!-- End Contact Form -->
+      
+              </div>
+      
+            
+          </section><!-- End Contact Section -->
+  
+</div>
+<div th:replace="shared/footer"></div>

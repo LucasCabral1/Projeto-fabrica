@@ -1,0 +1,58 @@
+<div th:replace="shared/header-logado"></div>
+    
+</div>
+                <!-- Begin Page Content -->
+                <div class="container mt-4 p-2">
+
+                    
+
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3" >
+                            <a href="/doacao/novo" class="btn btn-primary" style="margin-right: 30px;">Novo</a>
+                            <h6 class="m-0 font-weight-bold text-primary" style="display: inline-block;">Suas Doações</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Id</th>
+                                            <th>Email</th>  
+                                            <th>Descricao</th>
+                                            <th>Qtd Item</th>   
+                                            <th>Peso</th>
+                                            <th>Ong</th> 
+                                            <th>Status</th> 
+                                        </tr>
+                                    </thead>
+                                    
+                                    <tbody>
+                                        <th:block th:each="doacao : ${doacoes}">
+                                            <tr>
+                                                <td th:text="${doacao.id}">...</td>
+                                                <td th:text="${doacao.email}">...</td>
+                                                <td th:text="${doacao.descricao}">...</td>
+                                                <td th:text="${doacao.qtdItem}">...</td>
+                                                <td th:text="${doacao.peso}">...</td>
+                                                <td th:text="${doacao.ong}">...</td>
+                                                <td th:text="${doacao.status}">...</td>
+                                                
+                                                
+                                               
+                                                <td><a th:href="@{/doacao/alterar/{id}(id=${doacao.id})}" class="btn btn-warning">Alterar</a></td>
+                                                <td><a th:href="@{/doacao/excluir/{id}(id=${doacao.id})}" class="btn btn-danger">
+                                                    Cancelar</a></td>
+                                            </tr>
+                                        </th:block>
+                                       
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+                <div th:replace="shared/footer"></div>
